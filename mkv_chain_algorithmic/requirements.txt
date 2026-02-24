@@ -5,3 +5,5 @@ scikit-learn>=1.2
 # Optional for Leiden clustering:
 # igraph
 # leidenalg
+
+python run.py --csv "changethis.csv" --enable_churn --churn_k 3 --alpha 1.0 --acc_thresholds 0.50,0.60,0.70,0.80,0.90
