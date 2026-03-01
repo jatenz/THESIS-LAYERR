@@ -11,15 +11,11 @@ leidenalg
 
 2.  Basic Run
 
-python run.py –csv your_file.csv –freq W –train_ratio 0.7 –alpha 1.0
-–enable_churn –churn_k 3 –forecast_steps 1,2,4,8 –do_hmm –do_leiden
+python run.py --csv ea.csv --freq W --train_ratio 0.7 --alpha 1.0 --enable_churn --churn_k 3 --forecast_steps 1,2,4,8 --do_hmm --do_leiden                                      
 
 3.  Full Run 
 
-python run.py –csv your_file.csv –freq W –train_ratio 0.7 –alpha 1.0
-–enable_churn –churn_k 3 –forecast_steps 1,2,4,8 –do_hmm –hmm_iter 30
-–hmm_tol 1e-6 –do_leiden –leiden_k 10 –leiden_resolution 1.0
-–acc_thresholds 0.50,0.60,0.70,0.80,0.90 –topk 2
+python run.py --csv ea.csv --freq W --train_ratio 0.7 --alpha 1.0 --enable_churn --churn_k 3 --forecast_steps 1,2,4,8 --do_hmm --hmm_iter 30 --hmm_tol 1e-6 --do_leiden --leiden_k 10 --leiden_resolution 1.0 --acc_thresholds 0.50,0.60,0.70,0.80,0.90 --topk 2
 
 4.  Output Location
 
