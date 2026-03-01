@@ -1,0 +1,49 @@
+============================= MARKOV LOYALTY SYSTEM – RUN GUIDE =============================
+
+1.  Install Required Libraries
+
+pip install pandas numpy scikit-learn matplotlib igraph leidenalg
+
+If pip fails:
+
+python -m pip install pandas numpy scikit-learn matplotlib igraph
+leidenalg
+
+2.  Basic Run
+
+python run.py –csv your_file.csv –freq W –train_ratio 0.7 –alpha 1.0
+–enable_churn –churn_k 3 –forecast_steps 1,2,4,8 –do_hmm –do_leiden
+
+3.  Full Run 
+
+python run.py –csv your_file.csv –freq W –train_ratio 0.7 –alpha 1.0
+–enable_churn –churn_k 3 –forecast_steps 1,2,4,8 –do_hmm –hmm_iter 30
+–hmm_tol 1e-6 –do_leiden –leiden_k 10 –leiden_resolution 1.0
+–acc_thresholds 0.50,0.60,0.70,0.80,0.90 –topk 2
+
+4.  Output Location
+
+Check the outputs/ folder after running.
+
+Generated files include: 
+- transition_probabilities_train.csv 
+- steady_state.csv 
+- steady_state_nonabsorbing.csv 
+- forecast_kstep.csv 
+- evaluation_train.csv 
+- evaluation_test.csv 
+- graph_loyalty_over_time.png 
+- graph_state_proportions.png 
+- graph_transition_heatmap.png 
+- graph_steady_state.png 
+- graph_forecast_loyal.png
+
+6.  Dataset Format Required
+
+Your CSV must include: - Video publish time - Views - Watch time (hours) - Duration
+
+7.  Weekly vs Monthly
+
+Weekly: –freq W
+Monthly: –freq M
+
