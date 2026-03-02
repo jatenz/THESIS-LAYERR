@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from googleapiclient.discovery import build
 
 
-API_KEY = "AIzaSyD5qvw8n8smVA6iJ8TySqy5g7z1s_cywpk" # set via environment variable
+API_KEY = "your_api_key" # set via environment variable
 CHANNEL_NAME = "@MrBeast"           # change if needed
 INTERVAL_SECONDS = 10             # 1 hour
 
@@ -96,3 +96,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
