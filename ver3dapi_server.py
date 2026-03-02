@@ -77,4 +77,5 @@ async def upload_and_run(
         "status": "completed",
         "run_id": run_id,
         "output": result.stdout[-1000:]
+
     }
